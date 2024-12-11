@@ -17,20 +17,24 @@ body {
     "search-section"
     "content"
     "footer";
-  grid-template-rows: 70px 70px 1fr 40px;
+  grid-template-rows: 70px 100px 1fr 40px;
   min-height: 100vh;
 }
 
 nav {
   grid-area: navbar;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
 }
 
 nav h1 {
   font-size: 2rem;
   margin-left: 0.5rem;
+}
+
+.category-list ul {
+  display: none;
 }
 
 .search-section {
@@ -45,13 +49,33 @@ nav h1 {
   height: 32px;
   width: 60%;
   max-width: 400px;
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   border: none;
   padding-left: 10px;
   font-size: 0.8rem;
 }
 
 .search-section input:focus {
+  outline: 2px solid #818cf8;
+  outline-offset: 1px;
+}
+
+.search-section select {
+  height: 32px;
+  width: 25%;
+  max-width: 400px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: none;
+  outline: 1px solid white;
+  border-left: 1px solid #818cf8;
+  padding-left: 10px;
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+.search-section select:focus {
   outline: 2px solid #818cf8;
   outline-offset: 1px;
 }
@@ -120,6 +144,7 @@ nav h1 {
 .btn-buy:hover {
   outline: 2px solid #c7d2fe;
   outline-offset: 2px;
+  cursor: pointer;
 }
 
 footer {
@@ -155,11 +180,56 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
+    align-items: start;
+  }
+
+  nav h1 {
+    font-size: 1.6rem;
+    margin-left: 1rem;
+  }
+
+  .category-list ul {
+    display: block;
+    list-style-type: none;
+    padding: 1rem;
+  }
+
+  .category-list ul li a {
+    text-decoration: none;
+    color: #64748b;
+  }
+
+  .category-list ul li a:hover {
+    color: #6366f1;
+    text-decoration: underline;
   }
 
   .search-section {
-    padding-bottom: 0;
+  }
+
+  .search-section input {
+    height: 32px;
+    width: 60%;
+    max-width: 400px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: none;
+    padding-left: 10px;
+    font-size: 0.8rem;
+  }
+
+  .search-section select {
+    height: 32px;
+    width: 25%;
+    max-width: 150px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: none;
+    outline: 1px solid white;
+    border-left: 1px solid #818cf8;
+    padding-left: 10px;
+    font-size: 0.8rem;
+    color: #475569;
   }
 
   .car-grid {
