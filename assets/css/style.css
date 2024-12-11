@@ -24,13 +24,25 @@ body {
 nav {
   grid-area: navbar;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 nav h1 {
   font-size: 2rem;
-  margin-left: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.menu-icon {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  margin-right: 1.5rem;
+}
+
+.menu-icon:hover {
+  cursor: pointer;
+  color: #64748b;
 }
 
 .category-list ul {
@@ -147,6 +159,49 @@ nav h1 {
   cursor: pointer;
 }
 
+.paginator {
+  margin: 2rem 0 2rem 0;
+}
+
+.paginator ul {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0;
+  list-style-type: none;
+}
+
+.paginator ul li {
+  padding: 0.5rem;
+  min-width: 18px;
+  min-height: 18px;
+  text-align: center;
+  border-radius: 5px;
+  /* outline: 1px solid #cbd5e1; */
+  background-color: #f8fafc;
+  color: #9ca3af;
+}
+
+.paginator ul li:hover {
+  background-color: #c7d2fe !important;
+  color: white !important;
+  cursor: pointer;
+}
+
+.active-page {
+  background-color: #818cf8 !important;
+  color: white !important;
+  font-weight: 700;
+  outline: none !important;
+}
+
+.change-page {
+  background-color: #e0e7ff !important;
+  color: #6366f1 !important;
+  outline: none !important;
+}
+
 footer {
   /* background-color: brown; */
   grid-area: footer;
@@ -186,6 +241,10 @@ footer {
   nav h1 {
     font-size: 1.6rem;
     margin-left: 1rem;
+  }
+
+  .menu-icon {
+    display: none;
   }
 
   .category-list ul {
